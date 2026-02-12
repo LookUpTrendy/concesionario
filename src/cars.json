@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "name": "Apex GT-R",
+        "brand": "Arias23",
+        "type": "Superdeportivo",
+        "basePrice": 249000,
+        "images": [
+            "/apex.png",
+            "/zenith.png",
+            "/velocity.png"
+        ],
+        "specs": {
+            "potencia": "720 CV",
+            "aceleracion": "2.8s (0-100)",
+            "velocidadMax": "340 km/h",
+            "motor": "4.0L V8 Twin-Turbo"
+        },
+        "extras": [
+            {
+                "id": "e1_1",
+                "name": "Pack Aero Fibra de Carbono",
+                "price": 15000,
+                "description": "Mayor carga aerodinámica y reducción de peso."
+            },
+            {
+                "id": "e1_2",
+                "name": "Escape de Titanio",
+                "price": 8500,
+                "description": "Libera el sonido puro del V8."
+            }
+        ],
+        "description": "La máxima expresión de la precisión. Tecnología 'Ghost Shift' para cambios perfectos."
+    },
+    {
+        "id": 2,
+        "name": "Zenith Lumina",
+        "brand": "Arias23",
+        "type": "Lujo Eléctrico",
+        "basePrice": 185000,
+        "images": [
+            "/zenith.png",
+            "/apex.png",
+            "/velocity.png"
+        ],
+        "specs": {
+            "potencia": "1050 CV",
+            "aceleracion": "2.1s (0-100)",
+            "autonomia": "830 km"
+        },
+        "extras": [
+            {
+                "id": "e2_1",
+                "name": "Techo Solar Adaptativo",
+                "price": 12000,
+                "description": "Carga solar pasiva inteligente."
+            },
+            {
+                "id": "e2_3",
+                "name": "Enlace Neural Bridge",
+                "price": 15000,
+                "description": "Conexión directa mente-máquina."
+            }
+        ],
+        "description": "Potencia silenciosa y lujo extremo. El futuro de la movilidad premium."
+    },
+    {
+        "id": 4,
+        "name": "Apex Vertigo",
+        "brand": "Arias23",
+        "type": "Hipercoche",
+        "basePrice": 3400000,
+        "images": [
+            "/apex.png",
+            "/velocity.png",
+            "/zenith.png"
+        ],
+        "specs": {
+            "potencia": "2100 CV",
+            "velocidadMax": "500+ km/h"
+        },
+        "extras": [
+            {
+                "id": "e4_1",
+                "name": "Aislamiento Oro 24k",
+                "price": 25000,
+                "description": "Máxima gestión térmica del motor."
+            },
+            {
+                "id": "e4_3",
+                "name": "Modo Vuelo Corto",
+                "price": 250000,
+                "description": "Propulsores para saltos tácticos."
+            }
+        ],
+        "description": "Física desafiada. El pináculo de la ingeniería automotriz mundial."
+    }
+]
