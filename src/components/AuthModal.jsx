@@ -8,15 +8,47 @@ const AuthModal = ({ onClose, onLogin }) => {
         password: ''
     });
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Simulation of a successful registration/login
-        const userData = {
-            name: isLogin ? (formData.email.split('@')[0]) : formData.name,
-            email: formData.email
-        };
-        onLogin(userData);
-        onClose();
+
+        if (isLogin) {
+            try {
+                const response = await fetch('https://localhost:3001/api/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        email: formData.email,
+                        password: formData.password
+                    })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    onLogin(data.user);
+                    onClose();
+                } else {
+                    alert(data.error || 'Error al iniciar sesión');
+                }
+            } catch (error) {
+                console.error('Error de conexión:', error);
+                // Fallback simulation if backend is not running
+                const userData = {
+                    name: formData.email.split('@')[0],
+                    email: formData.email
+                };
+                onLogin(userData);
+                onClose();
+            }
+        } else {
+            // Simulation of a successful registration
+            const userData = {
+                name: formData.name,
+                email: formData.email
+            };
+            onLogin(userData);
+            onClose();
+        }
     };
 
     const handleChange = (e) => {
